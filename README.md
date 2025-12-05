@@ -9,31 +9,31 @@
 
 It takes the same spaghetti-logic planning spreadsheets everyone in construction pretends to understand, and turns them into:  
   
- = A clean, colour-coded daily grid
- = Automatically stacked multi-lane task bars (no overlaps, no chaos)
- = Milestones with red marker dots
- = A manpower histogram (because numbers make you look serious)
-= A two-page PDF that looks like it was prepared by someone who definitely charges consultancy rates
+- A clean, colour-coded daily grid
+- Automatically stacked multi-lane task bars (no overlaps, no chaos)
+- Milestones with red marker dots
+- A manpower histogram (because numbers make you look serious)
+- A two-page PDF that looks like it was prepared by someone who definitely charges consultancy rates
 
 ### And all of this happens with one button press, powered by Python, caffeine, and sheer spite.
 
 # Features Nobody Should Have To Implement, Yet Here We Are
 
-= Dark blue GUI theme matching the Cable Tray Calculator (unified brand identity = professional™)
+- Dark blue GUI theme matching the Cable Tray Calculator (unified brand identity = professional™)
 
-= Date picker pre-filled to 4–20 Dec 2025 (because… those are your current problems)
+- Date picker pre-filled to 4–20 Dec 2025 (because… those are your current problems)
 
-= Automatic PDF generation in two pages:
+- Automatic PDF generation in two pages:
 
-= Page 1 → construction grid with month colours, Fri/Sat greys, contractor task blocks, and milestone dots
+- Page 1 → construction grid with month colours, Fri/Sat greys, contractor task blocks, and milestone dots
 
-= Page 2 → manpower overview + stacked histogram by trade
+- Page 2 → manpower overview + stacked histogram by trade
 
-= Shaded variations of each contractor colour so tasks don’t blend into one giant blue rectangle (“Dynamic Motion Blue Hell”)
+- Shaded variations of each contractor colour so tasks don’t blend into one giant blue rectangle (“Dynamic Motion Blue Hell”)
 
-= PDF auto-opens after generation
+- PDF auto-opens after generation
 
-= Zero Excel formatting assumptions except the known template (your usual “Unnamed: X” art piece)
+- Zero Excel formatting assumptions except the known template (your usual “Unnamed: X” art piece)
 
 # How It Works (in Human Terms)
 
