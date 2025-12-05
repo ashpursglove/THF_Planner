@@ -95,11 +95,14 @@ project_root/
 
 Milestones in columns 1–2
 
-Dynamic Motion tasks in cols 4–6
+First contractor tasks in cols 4–6
 
-MediaPro tasks in cols 8–10
+Second contractor tasks in cols 8–10
 
-Ocubo tasks in cols 12–14
+Third contractor tasks in cols 12–14
+.  
+.  
+.  
 
 ## Sheet 2 should contain:
 
