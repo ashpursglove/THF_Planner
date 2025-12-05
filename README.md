@@ -76,14 +76,14 @@ python main.py
 ### Now beautifully modular:
 
 project_root/
-│
-├── main.py           # Entry point — fires up the GUI
-├── gui.py            # All PyQt5 UI logic
-├── pdf.py            # Milestones, lanes, stacked bars, manpower page
-├── Poppins-Regular.ttf
-├── Poppins-Bold.ttf
-└── README.md         # You're reading this masterpiece
-
+│  
+├── main.py           # Entry point — fires up the GUI  
+├── gui.py            # All PyQt5 UI logic  
+├── pdf.py            # Milestones, lanes, stacked bars, manpower page  
+├── Poppins-Regular.ttf  
+├── Poppins-Bold.ttf  
+└── README.md         # You're reading this masterpiece  
+  
 # The Excel Template (a necessary evil)
 
 ## Sheet 1 should contain:
