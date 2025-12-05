@@ -22,6 +22,19 @@ It takes the same spaghetti-logic planning spreadsheets everyone in construction
 
 ### And all of this happens with one button press, powered by Python, caffeine, and sheer spite.
 
+# How It Works (in Human Terms)
+
+- You point the app at your Excel file.
+
+- It rummages through the sheet, whispering “why… why was this built like this…?”
+
+- It reconstructs the timeline, sorts contractors, assigns slots, renders the grid, and decides where to put all the coloured rectangles.
+
+- It draws a second page showing how many humans need to be on site
+(and reveals just how overworked the welding team actually is).
+
+- A shiny PDF appears on your screen like a gift from the scheduling gods.
+
 # Features Nobody Should Have To Implement, Yet Here We Are
 
 - Dark blue GUI theme matching the Cable Tray Calculator (unified brand identity = professional™)
@@ -40,18 +53,6 @@ It takes the same spaghetti-logic planning spreadsheets everyone in construction
 
 - Zero Excel formatting assumptions except the known template (your usual “Unnamed: X” art piece)
 
-# How It Works (in Human Terms)
-
-- You point the app at your Excel file.
-
-- It rummages through the sheet, whispering “why… why was this built like this…?”
-
-- It reconstructs the timeline, sorts contractors, assigns slots, renders the grid, and decides where to put all the coloured rectangles.
-
-- It draws a second page showing how many humans need to be on site
-(and reveals just how overworked the welding team actually is).
-
-- A shiny PDF appears on your screen like a gift from the scheduling gods.
 
 # Installation
 
