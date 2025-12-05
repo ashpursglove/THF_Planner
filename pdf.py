@@ -301,43 +301,79 @@ def get_month_colors() -> Dict[int, colors.Color]:
     }
 
 
+
+
+
+
 def make_shade_for_task(base_color: colors.Color, index: int, total: int) -> colors.Color:
     """
-    Generate a clearly distinct shade for a task belonging to the same contractor.
+    Generate clearly distinct shades for tasks from the same contractor.
 
-    We vary both lightness and (slightly) the hue so that:
-      - All colours still look like they belong to the same contractor family.
-      - Adjacent tasks are much easier to distinguish.
-
-    index: 0-based index of the task in that contractor's task list
-    total: total number of tasks for that contractor
+    Knobs:
+      - l_min / l_max       → how dark/light the band is
+      - hue_shift_range     → how far around the colour wheel we wander
     """
     if total <= 1:
         return base_color
 
     import colorsys
 
-    # Normalised position 0..1 across that contractor's tasks
+    # Normalised index 0..1
     t = index / float(max(1, total - 1))
 
-    # Base RGB from reportlab colour (0..1 range)
+    # Base RGB (0..1)
     r, g, b = base_color.red, base_color.green, base_color.blue
 
-    # Convert to HLS so we can manipulate lightness and hue
+    # Convert to HLS
     h, l, s = colorsys.rgb_to_hls(r, g, b)
 
-    # Lightness: spread from "fairly dark" to "quite light"
-    l_min, l_max = 0.35, 0.80
+    # Slightly wider lightness range for stronger separation
+    # (lower l_min = darker darkest bar, higher l_max = lighter lightest bar)
+    l_min, l_max = 0.2, 0.70 #---------------------------(l_min, l_max) → further apart = more light/dark variation per shade
     l_new = l_min + (l_max - l_min) * t
 
-    # Tiny hue shift either side of the base hue
-    hue_shift_range = 0.06  # +/- 0.03
+    # Stronger hue swing for more obvious differences between tasks
+    # (increase this if you want even more separation, e.g. 0.30)
+    hue_shift_range = 0.35  # ±0.12 around the base hue -------------------bigger = more different colours
     h_new = (h + (t - 0.5) * hue_shift_range) % 1.0
 
-    # Keep the same saturation so it still looks like the same colour family
-    r2, g2, b2 = colorsys.hls_to_rgb(h_new, l_new, s)
+    # Keep saturation reasonably strong so bars don’t look washed out
+    s_new = min(1.0, max(0.40, s * 1.20))
 
+    r2, g2, b2 = colorsys.hls_to_rgb(h_new, l_new, s_new)
     return colors.Color(r2, g2, b2)
+
+
+
+
+
+def pick_task_label_color(bg: colors.Color) -> colors.Color:
+    """
+    Decide whether task-label text should be white or black on top of
+    a given background colour, based on relative luminance.
+
+    For darker bars -> white text.
+    For lighter bars -> black text, so labels stay readable.
+    """
+    # sRGB values in 0..1
+    r, g, b = bg.red, bg.green, bg.blue
+
+    # Convert to linear RGB (WCAG-ish)
+    def to_linear(c: float) -> float:
+        if c <= 0.03928:
+            return c / 12.92
+        return ((c + 0.055) / 1.055) ** 2.4
+
+    rl = to_linear(r)
+    gl = to_linear(g)
+    bl = to_linear(b)
+
+    # Relative luminance
+    L = 0.2126 * rl + 0.7152 * gl + 0.0722 * bl
+
+    # Threshold: above this it's "light" so use black text
+    return colors.black if L > 0.6 else colors.white
+
 
 
 # ============================================================
@@ -571,12 +607,16 @@ def generate_planning_grid(
             c.setStrokeColor(color)
             c.rect(bar_x, bar_y, bar_w, bar_height, stroke=0, fill=1)
 
+
+            # text
+            label_color = pick_task_label_color(color)
             c.setFont(regular_font_name, bar_font_size)
-            c.setFillColor(colors.white)
+            c.setFillColor(label_color)
             text_y = bar_y + (bar_height / 2.0) - (bar_font_size * 0.35)
             text_x = bar_x + 1.5 * mm
             c.drawString(text_x, text_y, bar_label)
             c.setFillColor(colors.black)
+
 
     # --------------------------------------------------------------
     # MILESTONES (dots + labels)
@@ -856,8 +896,10 @@ def generate_planning_grid_with_manpower(
     base_offset_from_bottom = 6 * mm
     bar_font_size = 9
 
+
     # Task bars (shaded per task)
     for idx, task in enumerate(tasks):
+        # Use shaded colour if available, else fall back to contractor base colour
         base_color = contractor_colors.get(task.contractor, colors.black)
         color = task_color_map.get(idx, base_color)
 
@@ -874,6 +916,7 @@ def generate_planning_grid_with_manpower(
                 continue
 
             cell_x, cell_y = date_positions[d]
+
             bar_y = (
                 cell_y
                 + base_offset_from_bottom
@@ -882,16 +925,24 @@ def generate_planning_grid_with_manpower(
             bar_x = cell_x + 1.0 * mm
             bar_w = cell_width - 2.0 * mm
 
+            # Draw solid bar
             c.setFillColor(color)
             c.setStrokeColor(color)
             c.rect(bar_x, bar_y, bar_w, bar_height, stroke=0, fill=1)
 
+            # Pick text colour (white on dark, black on light)
+            label_color = pick_task_label_color(color)
             c.setFont(regular_font_name, bar_font_size)
-            c.setFillColor(colors.white)
+            c.setFillColor(label_color)
+
             text_y = bar_y + (bar_height / 2.0) - (bar_font_size * 0.35)
             text_x = bar_x + 1.5 * mm
             c.drawString(text_x, text_y, bar_label)
+
+            # Reset fill back to black for subsequent elements
             c.setFillColor(colors.black)
+
+
 
     # Milestones
     milestones_by_date: Dict[date, List[Milestone]] = _dd(list)
