@@ -37,7 +37,7 @@ It takes the same spaghetti-logic planning spreadsheets everyone in construction
 
 # Features Nobody Should Have To Implement, Yet Here We Are
 
-- Dark blue GUI theme matching the Cable Tray Calculator (unified brand identity = professional™)
+- Dark blue GUI theme because nobody likes a light colour theme!™)
 
 - Date picker pre-filled to 4–20 Dec 2025 (because… those are your current problems)
 
@@ -47,9 +47,9 @@ It takes the same spaghetti-logic planning spreadsheets everyone in construction
 
 - Page 2 → manpower overview + stacked histogram by trade
 
-- Shaded variations of each contractor colour so tasks don’t blend into one giant blue rectangle (“Dynamic Motion Blue Hell”)
+- Shaded variations of each contractor colour so tasks don’t blend into one giant blue rectangle
 
-- PDF auto-opens after generation
+- PDF auto-opens after generation because I'm lazy
 
 - Zero Excel formatting assumptions except the known template (your usual “Unnamed: X” art piece)
 
