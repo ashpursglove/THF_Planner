@@ -10,17 +10,17 @@
 
 It takes the same spaghetti-logic planning spreadsheets everyone in construction pretends to understand, and turns them into:
 
-A clean, colour-coded daily grid
+= A clean, colour-coded daily grid
 
-Automatically stacked multi-lane task bars (no overlaps, no chaos)
+= Automatically stacked multi-lane task bars (no overlaps, no chaos)
 
-Milestones with red marker dots
+= Milestones with red marker dots
 
-A manpower histogram (because numbers make you look serious)
+= A manpower histogram (because numbers make you look serious)
 
-A two-page PDF that looks like it was prepared by someone who definitely charges consultancy rates
+= A two-page PDF that looks like it was prepared by someone who definitely charges consultancy rates
 
-And all of this happens with one button press, powered by Python, caffeine, and sheer spite.
+### And all of this happens with one button press, powered by Python, caffeine, and sheer spite.
 
 # Features Nobody Should Have To Implement, Yet Here We Are
 
