@@ -1,4 +1,3 @@
-# THF_Planner
 # Ash’s Construction / FF Planner
 ## A scheduling tool nobody asked for, but everybody definitely needed.
 
@@ -10,7 +9,7 @@
 
 It takes the same spaghetti-logic planning spreadsheets everyone in construction pretends to understand, and turns them into:
 
-= A clean, colour-coded daily grid
+ = A clean, colour-coded daily grid
 
 = Automatically stacked multi-lane task bars (no overlaps, no chaos)
 
