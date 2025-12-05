@@ -36,7 +36,7 @@ It takes the same spaghetti-logic planning spreadsheets everyone in construction
 
 # Features Nobody Should Have To Implement, Yet Here We Are
 
-- Dark blue GUI theme because nobody likes a light colour theme!™)
+- Dark blue GUI theme because nobody likes a light colour theme!)
 
 - Date picker pre-filled to 4–20 Dec 2025 (because… those are your current problems)
 
@@ -50,7 +50,7 @@ It takes the same spaghetti-logic planning spreadsheets everyone in construction
 
 - PDF auto-opens after generation because I'm lazy
 
-- Zero Excel formatting assumptions except the known template (your usual “Unnamed: X” art piece)
+- Zero Excel formatting assumptions except the known template (Excel planners and learning disabilities go hand in hand)
 
 
 # Installation
