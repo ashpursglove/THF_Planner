@@ -37,43 +37,43 @@ It takes the same spaghetti-logic planning spreadsheets everyone in construction
 
 # How It Works (in Human Terms)
 
-You point the app at your Excel file.
+- You point the app at your Excel file.
 
-It rummages through the sheet, whispering “why… why was this built like this…?”
+- It rummages through the sheet, whispering “why… why was this built like this…?”
 
-It reconstructs the timeline, sorts contractors, assigns slots, renders the grid, and decides where to put all the coloured rectangles.
+- It reconstructs the timeline, sorts contractors, assigns slots, renders the grid, and decides where to put all the coloured rectangles.
 
-It draws a second page showing how many humans need to be on site
+- It draws a second page showing how many humans need to be on site
 (and reveals just how overworked the welding team actually is).
 
-A shiny PDF appears on your screen like a gift from the scheduling gods.
+- A shiny PDF appears on your screen like a gift from the scheduling gods.
 
-Installation
+# Installation
 
-You need Python 3.10+ and the following dependencies:
+#### You need Python 3.10+ and the following dependencies:
 
 pip install pyqt5 reportlab pandas openpyxl
 
 
-Optional but recommended:
+#### Optional but recommended:
 
 Poppins font files (drop Poppins-Regular.ttf and Poppins-Bold.ttf in the same folder)
 
-Running the Thing
+# Running the Thing
 python main.py
 
 
-If the program doesn’t start, you probably:
+## If the program doesn’t start, you probably:
 
-forgot to install PyQt5
+- forgot to install PyQt5
 
-misspelled the file path
+- misspelled the file path
 
-sacrificed the wrong type of incense to the Excel gods
+- sacrificed the wrong type of lamb to the Excel gods
 
-Project Structure
+# Project Structure
 
-Now beautifully modular:
+### Now beautifully modular:
 
 project_root/
 │
@@ -84,9 +84,9 @@ project_root/
 ├── Poppins-Bold.ttf
 └── README.md         # You're reading this masterpiece
 
-The Excel Template (a necessary evil)
+# The Excel Template (a necessary evil)
 
-Sheet 1 should contain:
+## Sheet 1 should contain:
 
 Milestones in columns 1–2
 
