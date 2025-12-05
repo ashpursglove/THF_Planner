@@ -5,7 +5,7 @@
 
 ## This glorious contraption is Ash’s Construction & FF Planner, a desktop tool built to answer one simple question:
 
-#### “How do I turn a cursed Excel schedule into a beautiful, professional PDF… without crying?”
+### “How do I turn a cursed Excel schedule into a beautiful, professional PDF… without crying?”
 
 It takes the same spaghetti-logic planning spreadsheets everyone in construction pretends to understand, and turns them into:  
   
