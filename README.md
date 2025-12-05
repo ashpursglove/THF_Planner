@@ -3,8 +3,9 @@
 <img width="907" height="522" alt="image" src="https://github.com/user-attachments/assets/8773df8b-fa93-4da9-a8ea-99d7bff9201a" />
 
 ## A scheduling tool nobody asked for, but everybody definitely needed.
+  
 ---
-
+  
 # What Is This?
 
 ## This glorious contraption is Ash’s Construction & FF Planner, a desktop tool built to answer one simple question:
