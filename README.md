@@ -96,7 +96,7 @@ MediaPro tasks in cols 8–10
 
 Ocubo tasks in cols 12–14
 
-Sheet 2 should contain:
+## Sheet 2 should contain:
 
 A row of dates
 
@@ -106,42 +106,22 @@ A grid of numbers vaguely representing the number of humans
 
 If your Excel file deviates from this, the app will respond with:
 
-“Error: what fresh hell is this?”
+#### “Error: what fresh hell is this?”
 
-Output Example
+# Why Does This Exist?
 
-Page 1:
-✔ Month colours
-✔ Weekend shading
-✔ Task bars (shaded per task)
-✔ Milestone dots
-✔ Contractor legend
-✔ Date labels
-✔ Copyright
-✔ Overall smugness
+#### Because:
 
-Page 2:
-✔ Total man-days
-✔ Average manpower
-✔ Peak manpower & dates
-✔ Stacked histogram
-✔ Trade legend
-✔ Slight panic when you realise how much manpower is needed
+- Excel is a war crime.
 
-Why Does This Exist?
+- Time is finite.
 
-Because:
+- PDFs are pretty.
 
-Excel is a war crime.
+- **You needed something faster to present than a panicked screenshot during a client call.**
 
-Time is finite.
-
-PDFs are pretty.
-
-You needed something faster to present than a panicked screenshot during a client call.
-
-License
+# License
 © 2025 THF — Coded by Ashley Pursglove.
 All rights reserved.
-Unauthorized duplication will result in a strongly worded PDF.
+**Unauthorized duplication will result in a strongly worded PDF.**
 
