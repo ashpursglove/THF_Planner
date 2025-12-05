@@ -76,19 +76,6 @@ python main.py
 
 - sacrificed the wrong type of lamb to the Excel gods
 
-# Project Structure
-
-### Now beautifully modular:
-
-project_root/
-│  
-├── main.py           # Entry point — fires up the GUI  
-├── gui.py            # All PyQt5 UI logic  
-├── pdf.py            # Milestones, lanes, stacked bars, manpower page  
-├── Poppins-Regular.ttf  
-├── Poppins-Bold.ttf  
-└── README.md         # You're reading this masterpiece  
-  
 # The Excel Template (a necessary evil)
 
 ## Sheet 1 should contain:
@@ -115,6 +102,21 @@ A grid of numbers vaguely representing the number of humans
 If your Excel file deviates from this, the app will respond with:
 
 #### “Error: what fresh hell is this?”
+
+# Project Structure
+
+### Now beautifully modular:
+
+project_root/
+│  
+├── main.py           # Entry point — fires up the GUI  
+├── gui.py            # All PyQt5 UI logic  
+├── pdf.py            # Milestones, lanes, stacked bars, manpower page  
+├── Poppins-Regular.ttf  
+├── Poppins-Bold.ttf  
+└── README.md         # You're reading this masterpiece  
+  
+
 
 # Why Does This Exist?
 
