@@ -7,8 +7,8 @@
 
 #### “How do I turn a cursed Excel schedule into a beautiful, professional PDF… without crying?”
 
-It takes the same spaghetti-logic planning spreadsheets everyone in construction pretends to understand, and turns them into:
-
+It takes the same spaghetti-logic planning spreadsheets everyone in construction pretends to understand, and turns them into:  
+  
  = A clean, colour-coded daily grid
 
 = Automatically stacked multi-lane task bars (no overlaps, no chaos)
