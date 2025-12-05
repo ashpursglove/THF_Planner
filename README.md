@@ -3,6 +3,7 @@
 <img width="907" height="522" alt="image" src="https://github.com/user-attachments/assets/8773df8b-fa93-4da9-a8ea-99d7bff9201a" />
 
 ## A scheduling tool nobody asked for, but everybody definitely needed.
+---
 
 # What Is This?
 
